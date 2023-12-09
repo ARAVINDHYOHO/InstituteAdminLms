@@ -11,11 +11,8 @@ import Stepper from '@mui/material/Stepper'
 import MenuItem from '@mui/material/MenuItem'
 import StepLabel from '@mui/material/StepLabel'
 import Typography from '@mui/material/Typography'
-// import IconButton from '@mui/material/IconButton'
 import CardContent from '@mui/material/CardContent'
 import List from '@mui/material/List'
-// import InputAdornment from '@mui/material/InputAdornment'
-// import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
@@ -33,20 +30,11 @@ import toast from 'react-hot-toast'
 // ** Styled Component
 import StepperWrapper from '../../../../@core/styles/mui/stepper'
 
-
-// import FormControl from '@mui/material/FormControl'
-// import Radio from '@mui/material/Radio'
-// import RadioGroup from '@mui/material/RadioGroup'
-// import FormLabel from '@mui/material/FormLabel'
-// import FormControlLabel from '@mui/material/FormControlLabel'
 import { useDropzone } from 'react-dropzone'
 import ListItem from '@mui/material/ListItem'
 import IconButton from '@mui/material/IconButton'
 import Chip from '@mui/material/Chip'
 import InputAdornment from '@mui/material/InputAdornment'
-// import CustomChip from '../../../../@core/components/mui/chip'
-// import { display } from '@mui/system'
-// import Divider from '@mui/material/Divider'
 
 
 const steps = [
@@ -74,33 +62,12 @@ const RegisterPage = () => {
 
 
   const [loginShow, setLoginShow] = useState(true);
-  // const [otpShow, setOtpShow] = useState(false);
-  // const [forgetShow, setForgetShow] = useState(false);
-
-  // const handleLoginClick = () => {
-  //   setLoginShow(true);
-  //   setOtpShow(false);
-  //   setForgetShow(false);
-  // };
+  
   const handleOtpClick = () => {
     setLoginShow(false);
     setOtpShow(true);
     setForgetShow(false);
   };
-
-  // const handleForgetClick = () => {
-  //   setLoginShow(false);
-  //   setOtpShow(false);
-  //   setForgetShow(true);
-  // };
-
-  // const [otp, setOtp] = useState('');
-  // // const handleChange = () => setCode(code);
-
-  // const handleChange = (newValue) => {
-  //   setOtp(newValue);
-  // };
-
 
   // ** State
   const [files, setFiles] = useState([])

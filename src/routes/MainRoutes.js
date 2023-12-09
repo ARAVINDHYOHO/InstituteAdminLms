@@ -12,13 +12,13 @@ import OrderDetails from 'views/pages/orderManagement/OrderDetails';
 import PaymentPage from '../views/pages/paymentManagement/payments';
 import RefundPage from '../views/pages/refundManagement/refunds';
 import LoginPage from 'views/pages/authentication/LoginPage';
-import RegisterPage from 'views/pages/authentication/RegisterPage';
+// import RegisterPage from 'views/pages/authentication/RegisterPage';
 import ViewGroup from 'views/pages/userManagement/Groups/ViewGroup';
 import AddGroup from 'views/pages/userManagement/Groups/AddGroup';
 import EditGroup from 'views/pages/userManagement/Groups/EditGroup';
 import CourseDetails from 'views/pages/courseManagement/CourseDetails';
 import CategoriesPage from 'views/pages/courseManagement/Categories';
-import DepartmentPage from 'views/pages/courseManagement/department';
+// import DepartmentPage from 'views/pages/courseManagement/department';
 import OnlineClassPage from 'views/pages/classManagement/onlineClasses';
 import OfflineClassPage from 'views/pages/classManagement/offlineClasses';
 import LiveClassPage from 'views/pages/classManagement/liveClasses';
@@ -81,10 +81,10 @@ const MainRoutes = {
           path: 'login-page',
           element: <LoginPage />
         },
-        {
-          path: 'register-page',
-          element: <RegisterPage />
-        }
+        // {
+        //   path: 'register-page',
+        //   element: <RegisterPage />
+        // }
       ]
     },
     {
@@ -166,10 +166,10 @@ const MainRoutes = {
           path: 'categories',
           element: <CategoriesPage />
         },
-        {
-          path: 'department',
-          element: <DepartmentPage />
-        },
+        // {
+        //   path: 'department',
+        //   element: <DepartmentPage />
+        // },
         {
           path: 'Courses/CourseDetails',
           element: <CourseDetails />

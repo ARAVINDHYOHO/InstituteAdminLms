@@ -28,13 +28,13 @@ const Newroutes = {
           target: false
         },
 
-        {
-          id: 'register',
-          title: 'Register',
-          type: 'item',
-          url: '/auth-pages/register-page',
-          target: false
-        }
+        // {
+        //   id: 'register',
+        //   title: 'Register',
+        //   type: 'item',
+        //   url: '/auth-pages/register-page',
+        //   target: false
+        // }
       ]
     },
     {
@@ -117,13 +117,13 @@ const Newroutes = {
           url: '/course-management/courses',
           target: false
         },
-        {
-          id: 'department',
-          title: 'Department',
-          type: 'item',
-          url: '/course-management/department',
-          target: false
-        }
+        // {
+        //   id: 'department',
+        //   title: 'Department',
+        //   type: 'item',
+        //   url: '/course-management/department',
+        //   target: false
+        // }
 
       ]
     },
