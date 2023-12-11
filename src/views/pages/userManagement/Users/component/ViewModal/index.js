@@ -1,20 +1,57 @@
-// material-ui
-import { Typography } from '@mui/material';
+import React from 'react'
+import Icon from "../../../../../../@core/components/icon"
+import {
+    Box,
+    Button,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogTitle,
+    IconButton
+  } from "@mui/material";
+  import { Fragment } from 'react';
+  import UserView from "../../constants/UserView/index"
 
-// project imports
-import MainCard from 'ui-component/cards/MainCard';
+const ViewModal = () => {
+  return (
+    <div>
+    <Fragment>
+      <Dialog fullScreen aria-labelledby='full-screen-dialog-title'
+        open={OpenView}
+        disableEscapeKeyDown
+        aria-describedby='alert-dialog-description'
 
-// ==============================|| SAMPLE PAGE ||============================== //
+        onClose={(event, reason) => {
+          if (reason !== 'backdropClick') {
+            handleCloseView()
+          }
+        }}
+      >
+        <IconButton
+          aria-label='close'
+          onClick={handleCloseView}
+          sx={{ top: 8, right: 10, position: 'absolute', color: 'grey.500' }}
+        >
+          <Icon icon='tabler:x' style={{ color: "#ea5455" }} />
+        </IconButton>
+        <DialogTitle className='text-center'>Edit User Information</DialogTitle>
+        <DialogContent>
+        <UserView tab={tab} invoiceData={invoiceData} />
+        </DialogContent>
+        <DialogActions className='dialog-actions-dense'>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Button sx={{ marginRight: 5 }} style={{ backgroundColor: "#ea5455" }} variant='contained' onClick={handleCloseView} >
+              Cancel
+            </Button>
+            <Button sx={{ marginRight: 8 }} variant='contained' onClick={handleCloseView}>
+              Ok
+            </Button>
+          </Box>
+        </DialogActions>
+      </Dialog>
+    </Fragment>
+  </div>
+  )
+}
 
-const SamplePage = () => (
-  <MainCard title="Sample Card">
-    <Typography variant="body2">
-      Lorem ipsum dolor sit amen, consenter nipissing eli, sed do elusion tempos incident ut laborers et doolie magna alissa. Ut enif ad
-      minim venice, quin nostrum exercitation illampu laborings nisi ut liquid ex ea commons construal. Duos aube grue dolor in reprehended
-      in voltage veil esse colum doolie eu fujian bulla parian. Exceptive sin ocean cuspidate non president, sunk in culpa qui officiate
-      descent molls anim id est labours.
-    </Typography>
-  </MainCard>
-);
-
-export default SamplePage;
+export default ViewModal

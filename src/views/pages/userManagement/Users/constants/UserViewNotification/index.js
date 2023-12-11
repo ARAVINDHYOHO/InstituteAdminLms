@@ -1,20 +1,106 @@
-// material-ui
-import { Typography } from '@mui/material';
+// ** MUI Imports
+import Card from '@mui/material/Card'
+import Table from '@mui/material/Table'
+import Button from '@mui/material/Button'
+import TableRow from '@mui/material/TableRow'
+import Checkbox from '@mui/material/Checkbox'
+import TableHead from '@mui/material/TableHead'
+import TableBody from '@mui/material/TableBody'
+import TableCell from '@mui/material/TableCell'
+import CardHeader from '@mui/material/CardHeader'
+import Typography from '@mui/material/Typography'
+import CardContent from '@mui/material/CardContent'
+import CardActions from '@mui/material/CardActions'
+import TableContainer from '@mui/material/TableContainer'
 
-// project imports
-import MainCard from 'ui-component/cards/MainCard';
+const UserViewNotification = () => {
+  return (
+    <Card>
+      <CardHeader title='Notifications' sx={{ pb: 1.5 }} />
 
-// ==============================|| SAMPLE PAGE ||============================== //
+      <CardContent>
+        <Typography sx={{ mb: 6, color: 'text.secondary' }}>
+          You will receive notification for the below selected items.
+        </Typography>
+        <TableContainer sx={{ borderRadius: '6px !important', border: theme => `1px solid ${theme.palette.divider}` }}>
+          <Table sx={{ minWidth: 500 }}>
+            <TableHead>
+              <TableRow>
+                <TableCell>Type</TableCell>
+                <TableCell align='center'>Email</TableCell>
+                <TableCell align='center'>Browser</TableCell>
+                <TableCell align='center'>App</TableCell>
+              </TableRow>
+            </TableHead>
 
-const SamplePage = () => (
-  <MainCard title="Sample Card">
-    <Typography variant="body2">
-      Lorem ipsum dolor sit amen, consenter nipissing eli, sed do elusion tempos incident ut laborers et doolie magna alissa. Ut enif ad
-      minim venice, quin nostrum exercitation illampu laborings nisi ut liquid ex ea commons construal. Duos aube grue dolor in reprehended
-      in voltage veil esse colum doolie eu fujian bulla parian. Exceptive sin ocean cuspidate non president, sunk in culpa qui officiate
-      descent molls anim id est labours.
-    </Typography>
-  </MainCard>
-);
+            <TableBody sx={{ '& .MuiTableRow-root:nth-of-type(odd)': { backgroundColor: 'action.hover' } }}>
+              <TableRow>
+                <TableCell sx={{ fontSize: theme => theme.typography.body1.fontSize }}>New for you</TableCell>
+                <TableCell align='center' sx={{ pt: '0 !important', pb: '0 !important' }}>
+                  <Checkbox defaultChecked />
+                </TableCell>
+                <TableCell align='center' sx={{ pt: '0 !important', pb: '0 !important' }}>
+                  <Checkbox defaultChecked />
+                </TableCell>
+                <TableCell align='center' sx={{ pt: '0 !important', pb: '0 !important' }}>
+                  <Checkbox defaultChecked />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell sx={{ fontSize: theme => theme.typography.body1.fontSize }}>Account activity</TableCell>
+                <TableCell align='center' sx={{ pt: '0 !important', pb: '0 !important' }}>
+                  <Checkbox defaultChecked />
+                </TableCell>
+                <TableCell align='center' sx={{ pt: '0 !important', pb: '0 !important' }}>
+                  <Checkbox defaultChecked />
+                </TableCell>
+                <TableCell align='center' sx={{ pt: '0 !important', pb: '0 !important' }}>
+                  <Checkbox defaultChecked />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell sx={{ fontSize: theme => theme.typography.body1.fontSize }}>
+                  A new browser used to sign in
+                </TableCell>
+                <TableCell align='center' sx={{ pt: '0 !important', pb: '0 !important' }}>
+                  <Checkbox defaultChecked />
+                </TableCell>
+                <TableCell align='center' sx={{ pt: '0 !important', pb: '0 !important' }}>
+                  <Checkbox defaultChecked />
+                </TableCell>
+                <TableCell align='center' sx={{ pt: '0 !important', pb: '0 !important' }}>
+                  <Checkbox />
+                </TableCell>
+              </TableRow>
+              <TableRow sx={{ '& .MuiTableCell-root': { border: 0 } }}>
+                <TableCell sx={{ fontSize: theme => theme.typography.body1.fontSize }}>
+                  A new device is linked
+                </TableCell>
+                <TableCell align='center' sx={{ pt: '0 !important', pb: '0 !important' }}>
+                  <Checkbox defaultChecked />
+                </TableCell>
+                <TableCell align='center' sx={{ pt: '0 !important', pb: '0 !important' }}>
+                  <Checkbox />
+                </TableCell>
+                <TableCell align='center' sx={{ pt: '0 !important', pb: '0 !important' }}>
+                  <Checkbox />
+                </TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </CardContent>
 
-export default SamplePage;
+      <CardActions>
+        <Button variant='contained' sx={{ mr: 2 }}>
+          Save Changes
+        </Button>
+        <Button color='secondary' variant='tonal'>
+          Discard
+        </Button>
+      </CardActions>
+    </Card>
+  )
+}
+
+export default UserViewNotification
