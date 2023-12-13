@@ -14,29 +14,31 @@ const Newroutes = {
   // caption: 'Pages Caption',
   type: 'group',
   children: [
-    {
-      id: 'dropDown',
-      title: 'Auth Pages',
-      type: 'collapse',
-      icon: icons.IconUsers,
-      children: [
-        {
-          id: 'login',
-          title: 'Login Page',
-          type: 'item',
-          url: '/auth-pages/login-page',
-          target: false
-        },
 
-        // {
-        //   id: 'register',
-        //   title: 'Register',
-        //   type: 'item',
-        //   url: '/auth-pages/register-page',
-        //   target: false
-        // }
-      ]
-    },
+    // {
+    //   id: 'dropDown',
+    //   title: 'Auth Pages',
+    //   type: 'collapse',
+    //   icon: icons.IconUsers,
+    //   children: [
+    //     {
+    //       id: 'login',
+    //       title: 'Login Page',
+    //       type: 'item',
+    //       url: '/auth-pages/login-page',
+    //       target: false
+    //     },
+
+    //     {
+    //       id: 'register',
+    //       title: 'Register',
+    //       type: 'item',
+    //       url: '/auth-pages/register-page',
+    //       target: false
+    //     }
+    //   ]
+    // },
+
     {
       id: 'dropDown',
       title: 'User Management',
@@ -103,11 +105,19 @@ const Newroutes = {
       type: 'collapse',
       icon: icons.IconUsers,
       children: [
+        // {
+        //   id: 'categories',
+        //   title: 'Categories',
+        //   type: 'item',
+        //   url: '/course-management/categories',
+        //   target: false
+        // },
+
         {
-          id: 'categories',
-          title: 'Categories',
+          id: 'Department',
+          title: 'Department',
           type: 'item',
-          url: '/course-management/categories',
+          url: '/course-management/Department',
           target: false
         },
         {
@@ -117,16 +127,67 @@ const Newroutes = {
           url: '/course-management/courses',
           target: false
         },
-        // {
-        //   id: 'department',
-        //   title: 'Department',
-        //   type: 'item',
-        //   url: '/course-management/department',
-        //   target: false
-        // }
+       
 
       ]
     },
+
+    {
+      id: 'dropDown',
+      title: 'Content Management',
+      type: 'collapse',
+      icon: icons.IconUsers,
+      children: [
+        {
+          id: 'study-Materials',
+          title: 'Study Materials',
+          type: 'item',
+          url: '/content-management/study-Materials',
+          target: false
+        },
+        {
+          id: 'module-Videos',
+          title: 'Module Videos',
+          type: 'item',
+          url: '/content-management/module-Videos',
+          target: false
+        }
+     
+      ]
+    },
+
+    {
+      id: 'dropDown',
+      title: 'Branch Management',
+      type: 'collapse',
+      icon: icons.IconUsers,
+      children: [
+        {
+          id: 'branch',
+          title: 'Branch',
+          type: 'item',
+          url: '/branch-management/branch',
+          target: false
+        }
+      ]
+    },
+
+    {
+      id: 'dropDown',
+      title: 'Batch Management',
+      type: 'collapse',
+      icon: icons.IconUsers,
+      children: [
+        {
+          id: 'batch',
+          title: 'Batch',
+          type: 'item',
+          url: '/batch-management/batch',
+          target: false
+        }
+      ]
+    },
+
     {
       id: 'dropDown',
       title: 'Class Management',

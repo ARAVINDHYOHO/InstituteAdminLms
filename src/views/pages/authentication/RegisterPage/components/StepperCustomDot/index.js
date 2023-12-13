@@ -36,7 +36,7 @@ const StepperCustomDot = props => {
           ...(active && {
             borderWidth: 5,
             borderColor: 'primary.main',
-            backgroundColor: theme.palette.mode === 'light' ? 'common.white' : 'background.layout'
+            backgroundColor: theme.palette.mode === 'light' ? 'common.white' : 'background.default'
           })
         }}
       />

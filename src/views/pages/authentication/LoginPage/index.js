@@ -1,7 +1,5 @@
-// React Imports
 import React from 'react';
 import { Link } from 'react-router-dom';
-// material-ui
 import { useTheme } from '@mui/material/styles';
 import { Box, Grid, Card, CardContent, Checkbox, TextField, Typography, Stack } from '@mui/material';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -21,6 +19,8 @@ import Logo from 'ui-component/Logo';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+import AuthWrapper1 from '../AuthWrapper1';
 
 const LoginPage = () => {
   //** state functions */
@@ -199,13 +199,14 @@ const LoginPage = () => {
 
   return (
     <>
-      <Box sx={{ width: '100%' }}>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+    <AuthWrapper1>
+      <Box sx={{ width: '100%',alignItems: 'center',textAlign:"center" }} justifyContent="center" >
+        <Grid container justifyContent="center" >
           {loginShow && (
-            <Grid item xs={12} md={6} sm={6} sx={{ minHeight: '84vh', display: 'flex', justifyContent: 'center' }}>
-              <Grid container spacing={2} alignItems="center" justifyContent="center">
+            <Grid item xs={12} md={6} sm={6} sx={{ minHeight: '84vh', display: 'flex',  }} justifyContent="center" >
+              <Grid container alignItems="center" justifyContent="center">
                 <Box className="content-center">
-                  <Card>
+                  <Card sx={{justifyContent: 'center',alignItems: 'center',textAlign:"center"}} >
                     <CardContent>
                       {/* <Box sx={{ mb: 6 }}>
                       <Typography variant="h4" sx={{ mb: 1.5 }}>
@@ -616,6 +617,7 @@ const LoginPage = () => {
           </Grid>
         </Grid>
       </Box>
+      </AuthWrapper1>
     </>
   );
 };

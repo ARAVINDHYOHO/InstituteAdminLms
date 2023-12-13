@@ -1,4 +1,3 @@
-// React Import
 import { Link } from 'react-router-dom';
 
 // material-ui
