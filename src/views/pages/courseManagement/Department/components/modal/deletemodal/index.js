@@ -14,7 +14,7 @@ import Loader from "src/components/loader";
 import Swal from "sweetalert2";
 import { Toaster } from "react-hot-toast";
 
-const Deletemodal = ({
+const DeleteModal = ({
   textdata,
   selectdata,
   openDelete,
@@ -149,4 +149,4 @@ const Deletemodal = ({
   );
 };
 
-export default Deletemodal;
+export default DeleteModal;

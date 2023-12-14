@@ -15,7 +15,7 @@ import Icon from '../../../../@core/components/icon';
 import MenuItem from '@mui/material/MenuItem';
 
 import Header from 'components/Header';
-import Addmodal from '../Department/Component/Addmodal'
+import AddModal from './components/modal/addmodal';
 
 const ImgStyled = styled('img')(({ theme }) => ({
   width: 100,
@@ -67,7 +67,7 @@ const ResetButtonStyled = styled(Button)(({ theme }) => ({
 //   5: { title: 'applied', color: 'info' }
 // }
 
-const DepartmentPage = () => {
+const CategoriesPage = () => {
   // ** State Remove
   const [openDelete, setOpenDelete] = useState(false);
   const handleClickOpenDelete = () => setOpenDelete(true);
@@ -83,7 +83,7 @@ const DepartmentPage = () => {
   const handleAddClickOpen = () => setOpenAdd(true);
   const handleAddClose = () => setOpenAdd(false);
 
-  const [selectdata, setselectdata] = useState('');
+  // const [selectdata, setselectdata] = useState('');kh`19rtewrtf 55
 
   //permission table
 
@@ -284,7 +284,7 @@ const DepartmentPage = () => {
                   pt: (theme) => [`${theme.spacing(8)} !important`, `${theme.spacing(12.5)} !important`]
                 }}
               >
-                Edit Category
+                Edit Department
               </DialogTitle>
               <DialogContent
                 sx={{
@@ -315,18 +315,8 @@ const DepartmentPage = () => {
                 </Box>
 
                 <TextField
-                  id="name"
-                  autoFocus
-                  fullWidth
-                  type="name"
-                  label="Category Name"
-                  defaultValue={selectdata.category_name}
-                  sx={{ mb: 5 }}
-                />
-
-                <TextField
                   select
-                  defaultValue="10"
+                  defaultValue=""
                   id="select-without-label"
                   label="Department"
                   autoFocus
@@ -335,8 +325,10 @@ const DepartmentPage = () => {
                   inputProps={{ 'aria-label': 'Without label' }}
                 >
                   <MenuItem value=""></MenuItem>
-                  <MenuItem value={10}>Active</MenuItem>
-                  <MenuItem value={20}>Inactive</MenuItem>
+                  <MenuItem value={10}>Bsc Computer Science</MenuItem>
+                  <MenuItem value={20}>B-Tech IT</MenuItem>
+                  <MenuItem value={30}>BCA</MenuItem>
+                  <MenuItem value={40}>Msc</MenuItem>
                 </TextField>
               </DialogContent>
               <DialogActions
@@ -478,67 +470,23 @@ const DepartmentPage = () => {
 
       <Container maxWidth="xl">
         <Header
-          title="Categories"
+          title="Department"
           handleExport={downloadCSV}
           handleSearch={handleSearch}
           searchQuery={searchText}
           handleFilter={'hhh'}
           handleAdd={handleAddClickOpen}
-          addTitle={'Add Categories'}
+          addTitle={'Add Department'}
         />
 
         {/* <Toaster position="top-right" /> */}
 
-        <Addmodal
+        <AddModal
           // handleAddClickOpen={handleAddClickOpen}
           openAdd={openAdd}
           handleAddClose={handleAddClose}
           // textdata={handleDataFromChild}
         />
-        {/* 
-        <Grid
-          container
-          sx={{
-            display: 'flex',
-            alignItems: 'flex-end',
-            flexDirection: { xs: 'column', sm: 'row' },
-            justifyContent: 'space-between',
-            paddingLeft: 0,
-            paddingTop: 0,
-            marginTop: 3
-          }}
-        >
-          <Typography
-            sx={{
-              display: '',
-              justifyContent: '',
-              alignItems: 'flex-end',
-              marginRight: 0,
-              marginTop: { xs: 2, sm: 0 },
-              textAlign: { xs: 'center', sm: 'right' }
-            }}
-          >
-            <Button sx={{ marginRight: 5, marginTop: 0.5 }} size="medium" variant="outlined">
-              <Icon icon="bi:filter" /> Filter
-            </Button>
-            <Button sx={{ marginRight: 5, marginTop: 1 }} variant="outlined" size="medium" onClick={downloadCSV}>
-              <Icon icon="material-symbols:download-sharp" /> Export
-            </Button>
-          </Typography>
-          <div>
-            <TextField
-              sx={{ marginTop: 0.3 }}
-              placeholder="Search..."
-              // value={searchQuery}
-              inputProps={{
-                style: {
-                  height: '10px'
-                }
-              }}
-              onChange={(e) => handleSearch(e.target.value)}
-            />
-          </div>
-        </Grid> */}
 
         <div style={{ height: 400, width: '100%', marginTop: 30 }}>
           <DataGrid
@@ -615,4 +563,4 @@ const DepartmentPage = () => {
     </div>
   );
 };
-export default DepartmentPage;
+export default CategoriesPage;

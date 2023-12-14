@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import styled from "@emotion/styled";
 
 
-const Addmodal = ({ openAdd, handleAddClose}) => {
+const AddModal = ({ openAdd, handleAddClose}) => {
  
 const ImgStyled = styled('img')(({ theme }) => ({
   width: 100,
@@ -61,7 +61,7 @@ return(
       pt: (theme) => [`${theme.spacing(8)} !important`, `${theme.spacing(12.5)} !important`]
     }}
   >
-    Add Course
+    Add Department
   </DialogTitle>
   <DialogContent
     sx={{
@@ -91,19 +91,11 @@ return(
       </div>
     </Box>
 
-    <TextField
-      id="name"
-      autoFocus
-      fullWidth
-      type="name"
-      label="Category Name"
-      // defaultValue={selectdata.category_name}
-      sx={{ mb: 5 }}
-    />
+ 
 
     <TextField
       select
-      defaultValue="10"
+      defaultValue=""
       id="select-without-label"
       label="Department"
       autoFocus
@@ -112,8 +104,10 @@ return(
       inputProps={{ 'aria-label': 'Without label' }}
     >
       <MenuItem value=""></MenuItem>
-      <MenuItem value={10}>Active</MenuItem>
-      <MenuItem value={20}>Inactive</MenuItem>
+      <MenuItem value={10}>Bsc Computer Science</MenuItem>
+      <MenuItem value={20}>B-Tech IT</MenuItem>
+      <MenuItem value={30}>BCA</MenuItem>
+      <MenuItem value={40}>Msc</MenuItem>
     </TextField>
   </DialogContent>
   <DialogActions
@@ -133,4 +127,4 @@ return(
 )
 };
 
-export default Addmodal;
+export default AddModal;
